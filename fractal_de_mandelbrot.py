@@ -4,26 +4,28 @@ import matplotlib.pyplot as plt
 
 def definindo_cores(cor):
     global imagem
-    # Color map 
-    # https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
+    # Color map https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
+
+    plt.title("AX=" + argumentos[1] + " AY=" + argumentos[2] + " BX=" + argumentos[3] + " BY=" + argumentos[4], loc="center", pad=0)
+
     if cor == "hot":
-        plt.imshow(imagem,cmap='hot')
+        plt.imshow(imagem,cmap=cor)
     elif cor == "RdBu":
-        plt.imshow(imagem,cmap='RdBu')
+        plt.imshow(imagem,cmap=cor)
     elif cor == "xkcd":
         plt.imshow(imagem)
         plt.xkcd()
     elif cor == "magma":
-        plt.imshow(imagem,cmap='magma')
+        plt.imshow(imagem,cmap=cor)
     elif cor == "plasma":
-        plt.imshow(imagem,cmap='plasma')
+        plt.imshow(imagem,cmap=cor)
     elif cor == "cividis":
-        plt.imshow(imagem,cmap='cividis')
+        plt.imshow(imagem,cmap=cor)
     elif cor == "inferno":
-        plt.imshow(imagem,cmap="inferno")
+        plt.imshow(imagem,cmap=cor)
     else:
         plt.imshow(imagem)
-    
+
     plt.colorbar()
     plt.savefig(nomeArquivo + ".jpg")
     print("Imagem salvada: " + nomeArquivo + ".jpg")
@@ -43,15 +45,15 @@ def atual_datahora(modo):
 def iteracoes(c):
     z = complex(0,0)  # valor inicial do z 
     i = 0 
-    while( i < 127  and  abs(z*z) <= 2):
+    while i < 127 and abs(z*z) <= 2:
         z = z*z + c
         i = i + 1
-    return(i)
+    return i
 
 
 def Imagem(rx, ry, ie, sd):
-    hx = (sd.real - ie.real)/rx
-    hy = (sd.imag - ie.imag )/ry 
+    hx = (sd.real - ie.real) / rx
+    hy = (sd.imag - ie.imag) / ry 
     matriz = []
     for i in range(rx):
         linha = []
