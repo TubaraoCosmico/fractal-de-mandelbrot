@@ -66,7 +66,7 @@ def Imagem(rx, ry, ie, sd):
             linha.append(valor)
         matriz.append(linha)
     # print( np.matrix(matriz))
-    # np.savetxt(nomeArquivo, np.matrix(matriz), fmt='%.0f')
+    # np.savetxt(nomeArquivo + ".txt", np.matrix(matriz), fmt='%.0f')
     return np.matrix(matriz)    
 
 
@@ -87,8 +87,8 @@ if len(sys.argv) >= 7:
     b = complex(float(argumentos[3]), float(argumentos[4]))
     r = [int(argumentos[5]), int(argumentos[6])]
     imagem = Imagem(r[0], r[1], a,b)
-    # print("Gerado arquivo de saida: " + nomeArquivo)
-    # imagem = np.loadtxt(nomeArquivo)
+    # print("Gerado arquivo de saida: " + nomeArquivo + ".txt")
+    # imagem = np.loadtxt(nomeArquivo + ".txt")
     if len(sys.argv) == 8:
         definindo_cores(argumentos[7])
     else:
