@@ -78,7 +78,7 @@ if len(sys.argv) >= 7:
     # argumentos[5] = resolução em x 
     # argumentos[6] = resolução em y
     # argumentos[7] = Modo de cor (opcional) 
-    nomeArquivo = "ax=" + argumentos[1] + "__ay=" + argumentos[2] + "__bx=" + argumentos[3] + "__by=" + argumentos[4] + "__" + atual_datahora(1) + ".txt"
+    nomeArquivo = atual_datahora(1) + "__ax=" + argumentos[1] + "__ay=" + argumentos[2] + "__bx=" + argumentos[3] + "__by=" + argumentos[4] + ".txt"
     a = complex(float(argumentos[1]), float(argumentos[2]))
     b = complex(float(argumentos[3]), float(argumentos[4]))
     r = [int(argumentos[5]), int(argumentos[6])]
