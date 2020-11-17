@@ -6,7 +6,8 @@ def definindo_cores(cor):
     global imagem
     # Color map https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
 
-    plt.title("AX=" + argumentos[1] + " AY=" + argumentos[2] + " BX=" + argumentos[3] + " BY=" + argumentos[4], loc="center", pad=0)
+    plt.xlabel("AX=" + argumentos[1] + " AY=" + argumentos[2])
+    plt.ylabel("BX=" + argumentos[3] + " BY=" + argumentos[4])
 
     if cor == "hot":
         plt.imshow(imagem,cmap=cor)
