@@ -26,6 +26,7 @@ def definindo_cores(cor):
     
     plt.colorbar()
     plt.savefig(nomeArquivo + ".jpg")
+    print("Imagem salvada: " + nomeArquivo + ".jpg")
     plt.show()
 
 
@@ -65,6 +66,7 @@ def Imagem(rx, ry, ie, sd):
     np.savetxt(nomeArquivo, np.matrix(matriz), fmt='%.0f')
 
 
+# Opcionalmente você pode escolher o modo de cor
 # Verificando se todos os argumentos  foram passados 
 if len(sys.argv) >= 7:
     argumentos = sys.argv
@@ -75,6 +77,7 @@ if len(sys.argv) >= 7:
     # argumentos[4] = by (parte imaginária do ponto superior direito)
     # argumentos[5] = resolução em x 
     # argumentos[6] = resolução em y
+    # argumentos[7] = Modo de cor (opcional) 
     nomeArquivo = "ax=" + argumentos[1] + "__ay=" + argumentos[2] + "__bx=" + argumentos[3] + "__by=" + argumentos[4] + "__" + atual_datahora(1) + ".txt"
     a = complex(float(argumentos[1]), float(argumentos[2]))
     b = complex(float(argumentos[3]), float(argumentos[4]))
